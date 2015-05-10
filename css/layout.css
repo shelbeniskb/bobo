@@ -1,0 +1,69 @@
+html,body{
+		    padding: 0;
+		    margin: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		.main{
+		    width: 100%;
+		    height: 100%;
+		    background: #fff;
+		    overflow: hidden;
+		    position: relative;
+		}
+		.page{
+		    width: 100%;
+		    height: 100%;
+		    background: #0f0;
+		    font-size: 5em;
+		    text-align: center;
+		}
+		p{
+			margin: 0;
+			font-size: 2em;
+		}
+		.page_1{
+		   	background: url('../img/one.jpeg') center no-repeat;
+		   	background-color: red;
+		}
+		.page_2{
+		    background: url('../img/two.jpeg') center no-repeat;
+		    background-color: green;
+		}
+
+		.page_3{
+		    background: url('../img/three.jpeg') center no-repeat;
+		    background-color: pink;
+
+		}
+
+		.page_4{
+		    background: #ff0;
+		}
+
+		.page_5{
+		    background: #0ff;
+		}
+
+		.page_6{
+		    background: #f0f;
+		}
+
+		.icon_up {
+			position: absolute;
+			left: 50%;
+			top: 92%;
+			z-index: 1001;
+		}
+		
+		.p1_s_c {
+			position: absolute;
+			left: -100px;
+			bottom: -100px;
+			right: -100px;
+			top: 60%;
+			background: rgba(0,0,0,0.8);
+			z-index: 10;
+
+			shape-outside: polygon（0 0, 100% 0, 100% 100%,30% 100%）;
+		}

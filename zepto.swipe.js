@@ -54,11 +54,11 @@
                 if (backMove) {
                     moveItemPos = -distance + step;
                     moveItemIdx = curItemIdx === 0 ? curItemIdx : curItemIdx - 1;
-                    moveItem(moveItemIdx, moveItemPos);
+                    moveItem(moveItemIdx, moveItemPos, curItemIdx);
                 } else if(curItemIdx !== $items.length - 1){
                     moveItemPos = distance + step;
                     moveItemIdx = curItemIdx + 1;
-                    moveItem(moveItemIdx, moveItemPos);
+                    moveItem(moveItemIdx, moveItemPos, curItemIdx);
                     forwardMove = true;
                 }
             }
@@ -67,11 +67,11 @@
                 if (forwardMove) {
                     moveItemPos = distance + step;
                     moveItemIdx = curItemIdx === $items.length -1 ? curItemIdx : curItemIdx + 1;
-                    moveItem(moveItemIdx, moveItemPos);
+                    moveItem(moveItemIdx, moveItemPos, curItemIdx);
                 } else if(curItemIdx !== 0) {
                     moveItemPos = -distance + step;
                     moveItemIdx = curItemIdx - 1;
-                    moveItem(moveItemIdx, moveItemPos);
+                    moveItem(moveItemIdx, moveItemPos, curItemIdx);
                     backMove = true;
                 }
             }
@@ -106,8 +106,8 @@
             });
         }
 
-        function moveItem(moveItemIdx, moveItemPos) {
-            $items.eq(moveItemIdx).css('opacity', 1 - Math.abs(step) / distance);
+        function moveItem(moveItemIdx, moveItemPos, curItemIdx) {
+            $items.eq(curItemIdx).css('opacity', 1 - Math.abs(step) / distance);
             $items.eq(moveItemIdx).css(isVertical ? 'top' : 'left', moveItemPos + 'px').css({'z-index': 1000});
         }
 
